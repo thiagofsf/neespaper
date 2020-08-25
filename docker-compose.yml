@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  web:
+    build: 
+      context: .
+    image: neespaper:1.0
+    command: bundle exec jekyll serve -H 0.0.0.0 -t --force_polling --livereload --drafts
+    ports:
+      - 4000:4000
+    volumes:
+      - .:/srv/jekyll
