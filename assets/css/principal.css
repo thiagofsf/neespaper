@@ -1,0 +1,30 @@
+.logo{
+    width:100%; max-width: 600px; margin:0 auto;
+}
+
+.rodape{
+    width:100%;
+    background-color: #212529;
+    color:#fff;
+    font-family: 'Roboto', sans-serif;
+    padding:10px 5px 20px 5px;
+    text-align: center;
+}
+.rodape img{max-height:70px!important;}
+.rodapelogo{
+    max-height: 70px;
+}
+.datajornal{font-size: 1em; padding-top: 10px;}
+.titulosjornal{
+    padding-top: 15px; padding-bottom:10px; width:100%; display: block; vertical-align: middle;
+}
+.detalhetitulos{ width: auto; min-height: 2px; background-color: #000;}
+
+/*FONTES*/
+.font-0-5{font-size: 0.5em;}
+.font-0-7{font-size: 0.7em;}
+.font-1{font-size: 1em;}
+.font-1-5{font-size: 1.5em;}
+
+/*padding*/
+.paddingtop10{padding-top: 10px;}
