@@ -3,6 +3,39 @@ layout: default
 classes: wide
 ---
 <div class="container">
+
+  <div class="row">
+    <div class="col datajornal text-center">
+      AQUI ENTRA O SCRIPT DE DATA
+    </div>
+  </div>
+
+  {% assign posts = site.posts %}
+  <!-- DESTAQUES -->
+  <div class="titulosjornal"><h4>Principais Destaques</h4><div class="detalhetitulos"></div></div>
+  <div class="row paddingtop10">
+    <div class="row paddingtop10">
+      {% for post in posts limit:8%}
+        {% if post.category == "noticias" %}
+        <div class="col-md-3 p-1">
+          <div class="border rounded bg-light">
+              <img src="{{post.img}}">
+              <div class="hp-150 text-center d-table align-middle w-100">
+                  <div class="p-1 d-table-cell align-middle w-100">
+                      <div class="w-100 text-center"><h6>{{post.title}}</h6></div>
+                      <div class="w-100 text-center font-0-5">{{post.description}}</div>
+                  </div>
+              </div>
+              <a href="{{post.url | relative_url}}" class="btn btn-dark w-100">Continue Lendo</a>
+          </div>
+        </div>
+        {% else %}
+          {% continue %}
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+
   {% include exemplo-jornal.html %}
 
   {{ content }}

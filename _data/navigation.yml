@@ -1,9 +1,9 @@
 # main links
 main:
   - title: "Início"
-    url: /home/
+    url: /
   - title: "Notícias"
-    url: #
+    url: /noticias/
   - title: "Mercado"
     url: #
   - title: "Artigos"

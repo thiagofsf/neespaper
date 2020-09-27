@@ -28,3 +28,14 @@
 
 /*padding*/
 .paddingtop10{padding-top: 10px;}
+
+/*Height presets*/
+.hp-150{min-height: 150px;}
+.hp-300{min-height: 300px;}
+
+/* Definir BOTAO na parte inferior do div*/
+.bbottom{
+    position:absolute;
+    bottom:0px;
+    left:0px;
+}
