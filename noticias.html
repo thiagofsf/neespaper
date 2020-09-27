@@ -1,0 +1,39 @@
+---
+layout: default
+classes: wide
+---
+
+<div class="container">
+
+<!-- <h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Recent Posts" }}</h3> -->
+<div class="titulosjornal"><h4>Notícias Recentes</h4><div class="detalhetitulos"></div></div>
+
+{% if paginator %}
+  {% assign posts = paginator.posts %}
+{% else %}
+  {% assign posts = site.posts %}
+{% endif %}
+
+{% assign entries_layout = page.entries_layout | default: 'list' %}
+<div class="row paddingtop10">
+  {% for post in posts %}
+  {% if post.category == "noticias"%}
+    <div class="col-md-3 p-1">
+        <div class="border rounded bg-light">
+            <img src="{{post.img}}">
+            <div class="hp-150 text-center d-table align-middle w-100">
+                <div class="p-1 d-table-cell align-middle w-100">
+                    <div class="w-100 text-center"><h6>{{post.title}}</h6></div>
+                    <div class="w-100 text-center font-0-5">{{post.description}}</div>
+                </div>
+            </div>
+            <a href="{{post.url | relative_url}}" class="btn btn-dark w-100">Continue Lendo</a>
+        </div>
+    </div>
+    {% endif %}
+  {% endfor %}
+</div>
+
+{% include paginator.html %}
+
+</div>
