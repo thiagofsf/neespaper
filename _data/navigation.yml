@@ -2,8 +2,14 @@
 main:
   - title: "Início"
     url: /home/
-  - title: "Edições Anteriores"
-    url: /posts/
+  - title: "Notícias"
+    url: #
+  - title: "Mercado"
+    url: #
+  - title: "Artigos"
+    url: #
+  - title: "Aprenda Finanças"
+    url: #
   - title: "Sobre"
     url: #
   - title: "Contato"
