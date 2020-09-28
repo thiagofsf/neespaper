@@ -1,16 +1,16 @@
 ---
 layout: posts
-title: Novo site do NEESPAPER
-date: 2020-09-27 03:49 -0300
+title: Mais uma Notícia
+date: 2020-09-24 10:30 -0300
 category: noticias
-description: 'Esta postagem teste para o site NEESPAPER...'
-img: https://images.unsplash.com/photo-1600194991617-317f25e77508?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80
+description: 'Segunda notícia teste para o NEESPAPER...'
+img: https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80
 ---
 
-Este é o primeiro post do tipo notícias do site NEESPAPER, por aqui você poderá acompanhar todas as novidades em finanças, incluindo análises, notícias, novidades e muito mais.
+Este é o segundo post do tipo notícias do site NEESPAPER, por aqui você poderá acompanhar todas as novidades em finanças, incluindo análises, notícias, novidades e muito mais.
 
 
-![Imagem flutuante de teste](https://images.unsplash.com/photo-1600194991617-317f25e77508?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80)
+![Imagem flutuante de teste](https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80)
 
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi rhoncus metus et justo feugiat, nec hendrerit est elementum. Phasellus vitae mauris nisi. Nunc consequat risus vel purus consectetur, vitae aliquam nibh consequat. Nam non velit euismod, efficitur elit quis, auctor risus. Curabitur magna tortor, rhoncus tempus dapibus vel, faucibus eu mi. Aenean quis nisl sit amet sapien eleifend efficitur malesuada ac augue. Sed varius finibus quam at maximus. Quisque id pharetra erat.

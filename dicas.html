@@ -1,0 +1,41 @@
+---
+layout: default
+classes: wide
+---
+
+<div class="container">
+
+<!-- <h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Recent Posts" }}</h3> -->
+<div class="titulosjornal"><h4>Aprenda Finanças</h4><div class="detalhetitulos"></div></div>
+
+{% if paginator %}
+  {% assign dicas = paginator.dicas | sort: "date" | reverse %}
+{% else %}
+  {% assign dicas = site.dicas | sort: "date" | reverse %}
+{% endif %}
+
+  {% for dica in dicas %}
+  <div class="row">
+      <div class="col-md-4">
+          <img src="{{dica.img}}">
+      </div>
+      <div class="col-md-8 font-0-7">
+          <p>
+            {% if dica.description %}
+              {{dica.description}}
+            {% else %}
+              {% if dica.excerpt %}
+                {{ dica.excerpt | markdownify | strip_html | truncate: 270 }}
+              {% endif %}
+            {% endif %}
+          </p>
+          <a href = "{{dica.url | relative_url}}" class="btn btn-dark w-100 botao">Continue Lendo</a>
+      </div>
+  </div>
+  <hr>
+  {% endfor %}
+  
+
+{% include paginator.html %}
+
+</div>

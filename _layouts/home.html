@@ -10,33 +10,116 @@ classes: wide
     </div>
   </div>
 
-  {% assign posts = site.posts %}
+  {% assign posts = site.posts | sort: 'date' | reverse %}
   <!-- DESTAQUES -->
   <div class="titulosjornal"><h4>Principais Destaques</h4><div class="detalhetitulos"></div></div>
   <div class="row paddingtop10">
     <div class="row paddingtop10">
-      {% for post in posts limit:8%}
-        {% if post.category == "noticias" %}
+      {% for post in posts limit:8 %}
         <div class="col-md-3 p-1">
           <div class="border rounded bg-light">
               <img src="{{post.img}}">
               <div class="hp-150 text-center d-table align-middle w-100">
                   <div class="p-1 d-table-cell align-middle w-100">
                       <div class="w-100 text-center"><h6>{{post.title}}</h6></div>
-                      <div class="w-100 text-center font-0-5">{{post.description}}</div>
+                      <div class="w-100 text-center font-0-5">
+                        {% if post.description %}
+                          {{post.description}}
+                        {% else %}
+                          {% if post.excerpt %}
+                            {{ post.excerpt | markdownify | strip_html | truncate: 270 }}
+                          {% endif %}
+                        {% endif %}
+                      </div>
                   </div>
               </div>
-              <a href="{{post.url | relative_url}}" class="btn btn-dark w-100">Continue Lendo</a>
+              <a href="{{post.url | relative_url}}" class="btn btn-dark w-100 botao">Continue Lendo</a>
           </div>
         </div>
-        {% else %}
-          {% continue %}
-        {% endif %}
       {% endfor %}
     </div>
   </div>
 
-  {% include exemplo-jornal.html %}
+  <!-- ? 
+  <div class="titulosjornal"><h4>Título da Seção</h4><div class="detalhetitulos"></div></div>
+  <div class="p-2">
+      <img src="/assets/images/tabela.png" style="width:100%;">
+  </div>
+  -->
+
+  <!-- Gráficos -->
+  <div class="titulosjornal"><h4>Giro do Mercado Financeiro</h4><div class="detalhetitulos"></div></div>
+  <div class="p-2 text-center">
+      <h6>Evolução das Principais Bolsas</h6>
+      <img src="/assets/images/evolucao-bolsas.png" width="400">
+      <h6>Evolução das Principais Moedas</h6>
+      <img src="/assets/images/evolucao-moedas.png" width="400">
+  </div>
+
+  <!-- Moedas Digitais -->
+  <div class="titulosjornal"><h4>Moedas Digitais</h4><div class="detalhetitulos"></div></div>
+
+  <div class="row mt-2">
+      <div class="col-md-4" style="height: 100px; background-color: black;"></div>
+      <div class="col-md-8" style="height: 100px; background-color:lightgray;"></div>
+  </div>
+  <div class="row mt-2">
+      <div class="col-md-4" style="height: 100px; background-color: black;"></div>
+      <div class="col-md-8" style="height: 100px; background-color:lightgray;"></div>
+  </div>
+  <div class="row mt-2">
+      <div class="col-md-4" style="height: 100px; background-color: black;"></div>
+      <div class="col-md-8" style="height: 100px; background-color:lightgray;"></div>
+  </div>
+
+  <!-- Opinião do Convidado -->
+  <div class="titulosjornal"><h4>Opinião do Convidado</h4><div class="detalhetitulos"></div></div>
+  <div class="row">
+    
+    {% assign especialistas = site.especialista  | sort: 'date' | reverse %}
+
+    {% for especialista in especialistas %}
+      <div class="col-md-2">
+          <img src="{{especialista.img}}">
+      </div>
+      <div class="col-md-10 font-0-7">
+          <p>
+            {% if especialista.description %}
+              {{especialista.description}}
+            {% else %}
+              {% if especialista.excerpt %}
+                {{ especialista.excerpt | markdownify | strip_html | truncate: 270 }}
+              {% endif %}
+            {% endif %}
+          </p>
+          <a href = "{{post.url | relative_url}}" class="btn btn-dark w-100 botao">Continue Lendo</a>
+      </div>
+    {% endfor %}
+  </div>
+
+  {% assign dicas = site.dicas | sort: 'date' | reverse %}
+  <!-- Aprendendo Finanças -->
+  <div class="titulosjornal"><h4>Aprendendo Finanças</h4><div class="detalhetitulos"></div></div>
+  <div class="row">
+    {% for dica in dicas limit:1 %}
+      <div class="col-md-4">
+          <img src="{{dica.img}}">
+      </div>
+      <div class="col-md-8 font-0-7">
+          <p>
+            {% if dica.description %}
+              {{dica.description}}
+            {% else %}
+              {% if dica.excerpt %}
+                {{ dica.excerpt | markdownify | strip_html | truncate: 270 }}
+              {% endif %}
+            {% endif %}
+          </p>
+          <a href = "{{dica.url | relative_url}}" class="btn btn-dark w-100 botao">Continue Lendo</a>
+      </div>
+    {% endfor %}
+  </div>
+  <p></p>
 
   {{ content }}
 

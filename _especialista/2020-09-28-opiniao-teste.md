@@ -1,16 +1,15 @@
 ---
 layout: posts
-title: Mais uma Notícia
-date: 2020-09-27 03:55 -0300
-category: noticias
-description: 'Segunda notícia teste para o NEESPAPER...'
-img: https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80
+title: Opinião do Convidado - Post de Teste
+date: 2020-09-28 09:30 -0300
+category: convidado
+description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi rhoncus metus et justo feugiat, nec hendrerit est elementum. Phasellus vitae mauris nisi. Nunc consequat risus vel purus consectetur, vitae aliquam nibh consequat. Nam non velit euismod, efficitur elit quis, auctor risus. Curabitur magna tortor, rhoncus tempus dapibus vel, faucibus eu mi. Aenean quis nisl sit amet sapien eleifend efficitur malesuada ac augue. Sed varius finibus quam at maximus. Quisque id pharetra erat.
+
+Suspendisse accumsan euismod leo dictum mattis. Cras ultricies lobortis placerat. Donec leo risus, eleifend laoreet nunc id, bibendum vestibulum purus. Maecenas id ipsum eget metus porttitor tincidunt ultricies quis risus. Aenean iaculis lacinia dolor. Vestibulum placerat ligula ac metus feugiat, nec cursus libero varius. Aliquam facilisis sed augue vel consequat. Cras dapibus accumsan finibus. Curabitur pharetra quam nisi, vel luctus tortor pellentesque vel. Curabitur sit amet porttitor mauris. Integer lacinia congue erat, et ornare dolor consectetur vitae. Cras ornare placerat ex, sed interdum eros egestas eu.'
+img: https://images.unsplash.com/photo-1592009309602-1dde752490ae?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80
 ---
 
-Este é o segundo post do tipo notícias do site NEESPAPER, por aqui você poderá acompanhar todas as novidades em finanças, incluindo análises, notícias, novidades e muito mais.
-
-
-![Imagem flutuante de teste](https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80)
+![Some Title](https://images.unsplash.com/photo-1592009309602-1dde752490ae?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80){:style="float: right;margin-right: 7px;margin-top: 7px;"}
 
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi rhoncus metus et justo feugiat, nec hendrerit est elementum. Phasellus vitae mauris nisi. Nunc consequat risus vel purus consectetur, vitae aliquam nibh consequat. Nam non velit euismod, efficitur elit quis, auctor risus. Curabitur magna tortor, rhoncus tempus dapibus vel, faucibus eu mi. Aenean quis nisl sit amet sapien eleifend efficitur malesuada ac augue. Sed varius finibus quam at maximus. Quisque id pharetra erat.
