@@ -50,10 +50,17 @@ classes: wide
   <!-- Gráficos -->
   <div class="titulosjornal"><h4>Giro do Mercado Financeiro</h4><div class="detalhetitulos"></div></div>
   <div class="p-2 text-center">
-      <h6>Evolução das Principais Bolsas</h6>
-      <img src="{{'assets/images/evolucao-bolsas.png' | relative_url}}" width="400">
-      <h6>Evolução das Principais Moedas</h6>
-      <img src="{{'assets/images/evolucao-moedas.png' | relative_url}}" width="400">
+
+    {% assign graficos = site.graficos  | sort: 'date' | reverse %}
+
+    {% for grafico in graficos limit:1 %}
+      
+    <h6>Evolução das Principais Bolsas</h6>
+    <img src="{{grafico.img-bolsas | relative_url}}" width="400">
+    <h6>Evolução das Principais Moedas</h6>
+    <img src="{{grafico.img-moedas | relative_url}}" width="400">
+    {% endfor %}
+ 
   </div>
 
   <!-- Moedas Digitais -->

@@ -212,6 +212,9 @@ collections:
   dicas:
     output: true
     permalink: /:collection/:path
+  graficos:
+    output: true
+    permalink: /:collection/:path
 # Outputting
 permalink: /:categories/:title/
 paginate: 5 # amount of posts to show
