@@ -47,22 +47,30 @@ classes: wide
   </div>
   -->
 
-  <!-- Gráficos 
+  <!-- Gráficos --> 
   <div class="titulosjornal"><h4>Giro do Mercado Financeiro</h4><div class="detalhetitulos"></div></div>
   <div class="p-2 text-center">
 
     {% assign graficos = site.graficos  | sort: 'date' | reverse %}
 
     {% for grafico in graficos limit:1 %}
-      
-    <h6>Evolução das Principais Bolsas</h6>
-    <img src="{{grafico.img-bolsas | relative_url}}" width="400">
-    <h6>Evolução das Principais Moedas</h6>
-    <img src="{{grafico.img-moedas | relative_url}}" width="400">
+    <div class="row">
+      <div class="col-md-6">
+        <h6>Evolução das Principais Bolsas</h6>
+        <img src="{{grafico.img-bolsas | relative_url}}" width="400">
+      </div>
+      <div class="col-md-6">
+        <h6>Evolução das Principais Moedas</h6>
+        <img src="{{grafico.img-moedas | relative_url}}" width="400">
+      </div>
+      <div class="col-12 m-1">
+        <a href = "{{grafico.url | relative_url}}" class="btn btn-dark w-100 botao">Visualizar</a>
+      </div>
+    </div>
     {% endfor %}
  
   </div>
-  -->
+  <!---->
   
   <!-- Opinião do Convidado -->
   <div class="titulosjornal"><h4>Opinião do Convidado</h4><div class="detalhetitulos"></div></div>
@@ -84,7 +92,7 @@ classes: wide
               {% endif %}
             {% endif %}
           </p>
-          <a href = "{{post.url | relative_url}}" class="btn btn-dark w-100 botao">Continue Lendo</a>
+          <a href = "{{especialista.url | relative_url}}" class="btn btn-dark w-100 botao">Continue Lendo</a>
       </div>
     {% endfor %}
   </div>

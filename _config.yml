@@ -309,3 +309,13 @@ defaults:
       comments: #true
       share: true
       related: true
+  - scope:
+      path: _graficos
+      type: graficos
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: #true
+      share: true
+      related: true
